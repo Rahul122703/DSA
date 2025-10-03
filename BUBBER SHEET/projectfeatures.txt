@@ -1,0 +1,74 @@
+studentDashaboard :- 
+https://student-ed-tech-dashboard.vercel.app
+
+json dummmy data for the studentDashaboard :- 
+https://student-ed-tech-dashboard.vercel.app/data.json
+
+Tech Stack:
+    1. ReactVite
+    2. Tailwind CSS
+    3. Redux Toolkit
+    4. Recharts
+    5. Axios
+
+Projects Features:
+    1. toggle sidebar 
+    2. top bar with profile dropdown:
+        1. profile
+        2. settings
+        3. logout
+    3. Responsive and notificaion popups using react-hot-toast
+
+Pages and their significance:
+
+1. homepage
+   1.Weekly goal progressbar
+   2. attendence in each course using piechart
+   3. small cards for course in progress , completed lessons , upcoming quizzes , avg score
+   4. Recent course to go to most active or viewed courses easily 
+   5. also theres upcoming quizzes section with dates mentioned
+   6. study reminders with assignment submission graph
+
+2. Mycoursespage
+    1. Contains Courses Cards (thmmbnil,progeress,lessons,length,certificate)
+    2. user can filter the course using the search input and the filter buttons
+    JSON API format for the data followed is below
+        "courses": [
+            {
+            "id": 1,
+            "title": "Web Development Fundamentals",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCMssiYfC-okTd6Z8X-8El4xLPJynDoNcOlA&s",
+            "instructor": "Engr. Zaib Ul Nissa",
+            "progress": 75,
+            "lessons": 12,
+            "hours": 24,
+            "color": "bg-green-500",
+            "icon": "FaLaptopCode",
+            "tags": ["Enrolled", "Technical"],
+            "recent": true,
+            "attendance": {
+                "totalLectures": 12,
+                "attended": 9
+            }
+            }, ... so on ] 
+        here if admin wishes to add extra course with new tages then it the FE will atutomatically add new button as per the new tags for filtering
+
+3. Resume tool
+    1. Here the User can upload their resume and can also paste content related to resume and here the AI (right now dummy data) will analyze and here analysis progess will be shown which outputs dummy data
+
+4. progressPage
+    1. shoes the courses which are done and their status on a singlepage with consistency heat map as in github or leetcode
+
+5. messagespage
+    1. Mark as all read messages and also can delete messages with pagination
+    2. expand messages with reply button
+
+6. settingspage
+    1. pages to toggle react-switches (here all things are just static not connected with any logic)
+7. ProfilePage
+    1. show following user information:
+        1. email
+        2. number
+        3. address
+        4. DOB
+        5. acedemic information with skills and interests
